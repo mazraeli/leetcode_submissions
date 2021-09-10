@@ -1,7 +1,6 @@
-import twoSum
+import longestSubStrWOrpt
 
-inst = twoSum.Solution()
+inst = longestSubStrWOrpt.Solution()
 
-res = inst.twoSum([3,2,4], 6)
+res = inst.lengthOfLongestSubstring("")
 
-print (res)
