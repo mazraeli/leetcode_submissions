@@ -1,6 +1,7 @@
-import longestSubStrWOrpt
+import findMedianSrtArr
 
-inst = longestSubStrWOrpt.Solution()
+inst = findMedianSrtArr.Solution()
 
-res = inst.lengthOfLongestSubstring("")
+res = inst.findMedianSortedArrays([1, 2, 5], [4, 6])
 
+print (res)
