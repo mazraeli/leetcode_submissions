@@ -5,3 +5,5 @@
         * longestSubStrWOrpt.py
     3- Median of Two Sorted Arrays
         * findMedianSrtArr.py
+    4- Longest Palindromic Substring
+        * longestPalindrome.py

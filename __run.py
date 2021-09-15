@@ -1,7 +1,8 @@
-import findMedianSrtArr
+import longestPalindrome
 
-inst = findMedianSrtArr.Solution()
+inst = longestPalindrome.Solution()
 
-res = inst.findMedianSortedArrays([1, 2, 5], [4, 6])
+res = inst.longestPalindrome("tattarrattat")
+# res = inst.longestPalindrome("arra")
 
 print (res)
