@@ -7,3 +7,5 @@
         * findMedianSrtArr.py
     4- Longest Palindromic Substring
         * longestPalindrome.py
+    5- Reverse Integer
+        * reverseInt.py

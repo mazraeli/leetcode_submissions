@@ -1,8 +1,7 @@
-import longestPalindrome
+import reverseInt
 
-inst = longestPalindrome.Solution()
+inst = reverseInt.Solution()
 
-res = inst.longestPalindrome("tattarrattat")
-# res = inst.longestPalindrome("arra")
+res = inst.reverse(-321)
 
 print (res)
