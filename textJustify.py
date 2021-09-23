@@ -22,7 +22,6 @@ class Solution(object):
             for i in range(0, one_pad_length):
                 pad += " "
             left_pads_count = spaces % pads
-            right_pads_count = pads - left_pads_count
             for i in range(0, len(line) - 1):
                 if (i < left_pads_count):
                     tline += line[i] + pad + " "
