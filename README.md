@@ -9,3 +9,5 @@
         * longestPalindrome.py
     5- Reverse Integer
         * reverseInt.py
+    6- Text Justification
+        textJustify.py
