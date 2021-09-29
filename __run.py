@@ -1,9 +1,20 @@
-import textJustify
+import timeMap
 
-inst = textJustify.Solution()
+inst = timeMap.TimeMap()
 
 
-# res = inst.fullJustify(["This", "is", "an", "example", "of", "text", "justification."], 16)
-res = inst.fullJustify(["What","must","be","acknowledgment","shall","be"], 16)
-# res = inst.fullJustify(["Science","is","what","we","understand","well","enough","to","explain","to","a","computer.","Art","is","everything","else","we","do"], 20)
-print (res)
+# inst.set("love","high",10)
+# inst.set("love","low",20)
+# print(inst.get("love",5))
+# print(inst.get("love",10))
+# print(inst.get("love",15))
+# print(inst.get("love",20))
+# print(inst.get("love",25))
+
+
+inst.set("foo","bar",1)
+print(inst.get("foo",1))
+print(inst.get("foo",3))
+inst.set("foo","bar2",4)
+print(inst.get("foo",4))
+print(inst.get("foo",5))
