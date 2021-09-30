@@ -1,44 +1,31 @@
-import copy as cp
+class LinkedList:
+    def __init__(self, timestamp, value):
+        self.timestamp = timestamp
+        self.value = value
+        self.next = None
+
 
 class TimeMap:
 
     def __init__(self):
-        
-        self.map = {}
+        """
+        Initialize your data structure here.
+        """
+        self.database = {}
 
     def set(self, key: str, value: str, timestamp: int) -> None:
-        
-        if (key in self.map):
-            self.map[key][timestamp] = value
-        else:
-            tdict = {}
-            tdict[timestamp] = value
-            self.map[key] = cp.deepcopy(tdict)
-            tdict.clear()
-
+        node = LinkedList(timestamp, value)
+        node.next = self.database.get(key)
+        self.database[key] = node
+            
     def get(self, key: str, timestamp: int) -> str:
-        
-        if not(key in self.map):
+        if key not in self.database:
             return ""
+        
+        head = self.database[key]
+        while head:
+            if timestamp >= head.timestamp:
+                return head.value
+            head = head.next
 
-        tdict = self.map[key]
-        timestamp_list = list(tdict.keys())
-        timestamp_list.sort()
-
-        i = 0
-        for time in timestamp_list:
-            if (time == timestamp):
-                return self.map[key][timestamp_list[i]]
-            if (i == 0 and time > timestamp):
-                return ""
-            if (time > timestamp):
-                return self.map[key][timestamp_list[i - 1]]
-            i += 1
-
-        return self.map[key][timestamp_list[i - 1]]
-
-
-# Your TimeMap object will be instantiated and called as such:
-# obj = TimeMap()
-# obj.set(key,value,timestamp)
-# param_2 = obj.get(key,timestamp)
+        return ""
